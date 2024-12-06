@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AdmissionBot Chat</title>
+
+    <link
+      rel="shortcut icon"
+      href="https://img.icons8.com/3d-fluency/94/chatbot.png"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #4158d0;
+        background-image: linear-gradient(
+            43deg,
+            #4158d0 0%,
+            #c850c0 46%,
+            #ffcc70 100%
+          ),
+          url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Ccircle cx='20' cy='20' r='1.5' fill='black' opacity='0.1'/%3E%3Ccircle cx='40' cy='40' r='1.5' fill='black' opacity='0.1'/%3E%3Ccircle cx='80' cy='80' r='1.5' fill='black' opacity='0.1'/%3E%3Ccircle cx='10' cy='60' r='1.5' fill='black' opacity='0.1'/%3E%3Ccircle cx='90' cy='30' r='1.5' fill='black' opacity='0.1'/%3E%3Ccircle cx='70' cy='50' r='1.5' fill='black' opacity='0.1'/%3E%3C/svg%3E");
+        background-size: cover, 50px 50px;
+        background-repeat: no-repeat, repeat;
+      }
+      h1 {
+        font-family: "DM Serif Text", serif;
+        text-align: center;
+        font-size: 3.5rem;
+        line-height: 1;
+      }
+      #chat-container {
+        width: 100%;
+        max-width: 600px;
+        text-align: center;
+        color: #fffcec;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="chat-container">
+      <h1>Welcome to Admission Chatbot!</h1>
+      <p>Need help with admissions, courses, or fees? Start a chat below:</p>
+      <!-- Dialogflow Chatbot widget -->
+      <div id="df-chat"></div>
+    </div>
+
+    <!-- Dialogflow Web Integration Script -->
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger
+      chat-icon="https:&#x2F;&#x2F;res.cloudinary.com&#x2F;dkdteb9m5&#x2F;image&#x2F;upload&#x2F;v1733356367&#x2F;output-onlinepngtools_ii8jte.png"
+      intent="WELCOME"
+      chat-title="Student Assistant"
+      agent-id="642dcd19-504f-42a0-a3e7-069f2191ceec"
+      language-code="en"
+    ></df-messenger>
+  </body>
+</html>
